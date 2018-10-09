@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class ProductDataPrinter {
@@ -33,6 +34,11 @@ public class ProductDataPrinter {
             ,"Taktowanie procesora: "
             ,"Rodzaje złącz: "
             ,"Cena: "};
+    private int companyCount;
+
+    public ProductDataPrinter(){
+        this.companyCount = 0;
+    }
 
     public void setCategory(String category) {
         this.category = category;
@@ -48,6 +54,20 @@ public class ProductDataPrinter {
                 break;
             case "GRAPH":
                 printGraphicsData(tokenizer);
+                break;
+        }
+    }
+
+    public void printData(Scanner scanner){
+        switch (category){
+            case "PROC" :
+                printProcessorData(scanner);
+                break;
+            case "DISC":
+                printDiscData(scanner);
+                break;
+            case "GRAPH":
+                printGraphicsData(scanner);
                 break;
         }
     }
@@ -78,6 +98,18 @@ public class ProductDataPrinter {
         printDataLine(buildDataLine(graphicsTemplate, tokenizer));
     }
 
+    private void printProcessorData(Scanner scanner){
+        printDataLine(buildDataLine(processorTemplate, scanner));
+    }
+
+    private void printDiscData(Scanner scanner){
+        printDataLine(buildDataLine(diskTemplate, scanner));
+    }
+
+    private void printGraphicsData(Scanner scanner){
+        printDataLine(buildDataLine(graphicsTemplate, scanner));
+    }
+
     private String[] buildDataLine(String[] template, StringTokenizer tokenizer){
         String[] line = template.clone();
         for(int i=0; i<line.length; i++){
@@ -88,11 +120,32 @@ public class ProductDataPrinter {
         return line;
     }
 
+    private String[] buildDataLine(String[] template, Scanner scanner){
+        String[] line = template.clone();
+        for(int i=0; i<line.length; i++){
+            if(scanner.hasNextFloat()){
+                Float token = scanner.nextFloat();
+                String space = getSpace(line[i].length(), String.valueOf(token).length());
+                line[i] = line[i]+token+space;
+            }else if(scanner.hasNextInt()){
+                int token = scanner.nextInt();
+                String space = getSpace(line[i].length(), String.valueOf(token).length());
+                line[i] = line[i]+token+space;
+            }else if(scanner.hasNext()){
+                String token = getTokenValue(scanner.next());
+                String space = getSpace(line[i].length(), token.length());
+                line[i] = line[i]+token+space;
+            }
+        }
+        return line;
+    }
+
     private void printDataLine(String[] line){
         for(int i=0; i<line.length; i++){
             System.out.print(line[i]);
         }
         System.out.print("\n");
+
     }
 
     private String getTokenValue(String token){
@@ -112,6 +165,17 @@ public class ProductDataPrinter {
             space.append("\t");
         }
         return space.toString();
+    }
+
+    public int findCompanyOccurences(Scanner scanner, String companyName){
+        companyCount = 0;
+        while (scanner.hasNext()){
+            if(scanner.findInLine(companyName) != null){
+                companyCount++;
+            }
+            scanner.nextLine();
+        }
+        return companyCount;
     }
 }
 

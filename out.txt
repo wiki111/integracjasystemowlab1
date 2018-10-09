@@ -1,0 +1,20 @@
+Data:	2018-10-08
+
+
+Kategoria:	Procesory
+
+Producent: AMD				Model: ATHLON				Liczba rdzeni: X2			Seria: 7750				Taktowanie: 2.6				Cache L1: <<brak danych>>		Cache L2: 6				Cache L3: <<brak danych>>		Cena: 250.00				Opakowanie: BOX				
+Producent: INTEL			Model: i7				Liczba rdzeni: X4			Seria: 7200QM				Taktowanie: 2.8				Cache L1: <<brak danych>>		Cache L2: 4				Cache L3: 8				Cena: 450.00				Opakowanie: OEM				
+Producent: INTEL			Model: i5				Liczba rdzeni: X6			Seria: 8600K				Taktowanie: 3.6				Cache L1: 9				Cache L2: <<brak danych>>		Cache L3: <<brak danych>>		Cena: 1400.00				Opakowanie: BOX				
+
+Kategoria:	Dyski
+
+Producent: CRUCIAL			Model: BX300				Interfejs: SATA				Pojemność: 120GB			Prędkość odczytu: 555MB/s		Prędkość zapisu: 510MB/s		Rodzaj pamięci: SSD			Rozmiar: 2.5''				Cena: 109.00				Opakowanie: OEM				
+Producent: MICRON			Model: MARVELL				Interfejs: SATA III			Pojemność: 256GB			Prędkość odczytu: 530MB/s		Prędkość zapisu: <<brak danych>>	Rodzaj pamięci: SSD			Rozmiar: 2.5''				Cena: 189.00				Opakowanie: OEM				
+Producent: LaCie			Model: 12big				Interfejs: Thunderbolt 3		Pojemność: 96TB				Prędkość odczytu: 2600MB/s		Prędkość zapisu: <<brak danych>>	Rodzaj pamięci: <<brak danych>>		Rozmiar: <<brak danych>>		Cena: 40000.00				Opakowanie: BOX				
+
+Kategoria:	Karty graficzne
+
+Producent: Gigabyte			Model: GeForce GTX1060			Pamięć: 6GB				Rodzaj pamięci: GDDR5			Taktowanie pamięci:  8008MHz		Taktowanie procesora: 1582MHz		Rodzaje złącz: HDMI,DVI,DisplayPort	Cena: 1199.00				
+Producent: MSI				Model: GeForce GTX1060			Pamięć: 6GB				Rodzaj pamięci: GDDR5			Taktowanie pamięci:  <<brak danych>>	Taktowanie procesora: 1594MHz		Rodzaje złącz: HDMI,DVI,DisplayPort	Cena: 1399.00				
+Producent: PNY				Model: Quadro P6000			Pamięć: 24GB				Rodzaj pamięci: GDDR5X			Taktowanie pamięci:  <<brak danych>>	Taktowanie procesora: <<brak danych>>	Rodzaje złącz: DVI,DisplayPort		Cena: 22999.00				
