@@ -1,17 +1,18 @@
 package com.company;
 
-import java.io.BufferedReader;
+import com.company.lab2.DataProcessor;
+import com.company.lab2.FileUtility;
+import com.company.lab2.MainLayout;
+
+import javax.swing.*;
 import java.io.File;
-import java.io.FileReader;
-import java.net.URL;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        String filename = "data.txt";
+        /*String filename = "data.txt";
         URL path = Main.class.getResource(filename);
         File dataFile = new File(path.getFile());
         String line = null;
@@ -20,7 +21,7 @@ public class Main {
             BufferedReader reader = new BufferedReader(fileReader);
             ProductDataPrinter dataPrinter = new ProductDataPrinter();
 
-            /*while((line = reader.readLine()) != null){
+            *//*while((line = reader.readLine()) != null){
                 StringTokenizer tokenizer = new StringTokenizer(line, "|");
                 while (tokenizer.hasMoreTokens()){
                     switch (tokenizer.nextToken()){
@@ -41,14 +42,7 @@ public class Main {
                             break;
                     }
                 }
-            }*/
-
-
-
-
-            /*while (scanner.hasNext()){
-                System.out.println(scanner.next());
-            }*/
+            }*//*
 
 
             Scanner scanner = new Scanner(dataFile).useDelimiter("\\||\n");
@@ -79,7 +73,7 @@ public class Main {
 
             System.out.println("\n Company appears "
                     + dataPrinter.findCompanyOccurences(
-                            new Scanner(dataFile), "PNY")
+                            new Scanner(dataFile), "INTEL")
                     + " times");
 
             reader.close();
@@ -88,7 +82,29 @@ public class Main {
 
         }catch (Exception e){
             System.out.println("Error occured : " + e.getMessage());
+        }*/
+
+        File dataFile = null;
+        try{
+             dataFile = FileUtility.getFile();
+        }catch (Exception e){
+
         }
 
+        MainLayout mainLayout = new MainLayout();
+
+        try{
+            Scanner scanner = new Scanner(dataFile).useDelimiter("\\||\n");
+            DataProcessor dataProcessor = new DataProcessor();
+            dataProcessor.saveData(scanner);
+            scanner.close();
+            mainLayout.setUpTable(dataProcessor.getHeaders(), dataProcessor.getData());
+        }catch (Exception e){
+            System.out.println("Error occured : " + e.getMessage());
+        }
+
+
+        mainLayout.setVisible(true);
+        mainLayout.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }

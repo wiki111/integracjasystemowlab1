@@ -1,0 +1,7 @@
+AMD|ATHLON|X2|7750|2.6|<<brak danych>>|6|<<brak danych>>|250.00|BOX
+INTEL|i7|X4|7200QM|2.8|<<brak danych>>|4|8|450.00|OEM
+INTEL|i5|X6|8600K|3.6|9|<<brak danych>>|<<brak danych>>|1400.00|BOX
+INTEL|i5|X6|8600K|3.6|9|<<brak danych>>|<<brak danych>>|1400.00|BOX
+INTEL|i5|X6|8600K|3.6|9|<<brak danych>>|<<brak danych>>|1400.00|BOX
+INTEL|i5|X6|8600K|3.6|9|<<brak danych>>|<<brak danych>>|1400.00|BOX
+INTEL|i5|X6|KKK|3.6|9|<<brak danych>>|<<brak danych>>|1400.00|BOX

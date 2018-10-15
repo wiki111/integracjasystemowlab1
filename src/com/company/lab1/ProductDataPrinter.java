@@ -1,4 +1,4 @@
-package com.company;
+package com.company.lab1;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -35,6 +35,8 @@ public class ProductDataPrinter {
             ,"Rodzaje złącz: "
             ,"Cena: "};
     private int companyCount;
+    private String[] headers = new String[10];
+    private Object[][] data = new Object[10][10];
 
     public ProductDataPrinter(){
         this.companyCount = 0;
