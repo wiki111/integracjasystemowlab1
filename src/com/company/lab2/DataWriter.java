@@ -35,4 +35,16 @@ public class DataWriter {
         }
     }
 
+    public void saveToFile(String data, File file){
+        try{
+            BufferedWriter fileWriter = new BufferedWriter(new FileWriter(file.getAbsolutePath()));
+            fileWriter.write(data);
+            fileWriter.flush();
+            fileWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
 }

@@ -11,7 +11,7 @@ import java.util.zip.ZipInputStream;
 
 public class FileUtility {
 
-    public static final String FILEPATH = "/home/reter/Dokumenty/ProjektyStudia/SkulimLab1/src/com/company/new_data.txt";
+    public static final String FILEPATH = "/home/reter/Dokumenty/ProjektyStudia/SkulimLab1/src/com/company/data.txt";
     private static final String zipfilepath = "/home/reter/Dokumenty/ProjektyStudia/SkulimLab1/src/com/company/new_data.zip";
     private static final String outputPath ="/home/reter/Dokumenty/ProjektyStudia/SkulimLab1/src/com/company/";
     public static final String OUTPUT_FILE = "/home/reter/Dokumenty/ProjektyStudia/SkulimLab1/src/com/company/new_data.zip";

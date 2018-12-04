@@ -98,9 +98,12 @@ public class Main {
             DataProcessor dataProcessor = new DataProcessor();
             dataProcessor.saveData(scanner);
             scanner.close();
-            mainLayout.setUpTable(dataProcessor.getHeaders(), dataProcessor.getData());
+            mainLayout.date = dataProcessor.date;
+            mainLayout.setUpTable(dataProcessor.getHeaders(0), dataProcessor.getData(0));
+            mainLayout.setUpTable2(dataProcessor.getHeaders(1), dataProcessor.getData(1));
+            mainLayout.setUpTable3(dataProcessor.getHeaders(2), dataProcessor.getData(2));
         }catch (Exception e){
-            System.out.println("Error occured : " + e.getMessage());
+            e.printStackTrace();
         }
 
 

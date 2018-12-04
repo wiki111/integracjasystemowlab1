@@ -24,7 +24,6 @@ public class SelectionListener implements ListSelectionListener{
             for(int i=min; i<=max; i++){
                 if(lsm.isSelectedIndex(i)){
                     System.out.println(" " + i);
-                    mainLayout.fillForm(i);
                 }
             }
         }
